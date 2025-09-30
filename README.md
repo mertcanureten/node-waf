@@ -1,45 +1,45 @@
 # Node-WAF
 
-Node.js için Açık Kaynak Web Application Firewall - OWASP Top 10 saldırı vektörlerine karşı kapsamlı, modüler ve community-driven çözüm.
+Open Source Web Application Firewall for Node.js - A comprehensive, modular, and community-driven solution against OWASP Top 10 attack vectors.
 
-## 🚀 Özellikler
+## 🚀 Features
 
-- **Adaptive Learning Mode**: Uygulama trafiğini öğrenerek false positive oranını minimize eder
-- **Modüler Yapı**: İhtiyacınıza göre güvenlik modüllerini seçin
-- **OWASP Top 10 Koruması**: XSS, SQLi, NoSQLi, ReDoS ve daha fazlası
-- **Çoklu Framework Desteği**: Express, Koa, Fastify
-- **Community Rules**: Sürekli güncellenen kural setleri
-- **Prometheus Entegrasyonu**: Metrikler ve monitoring
-- **Sıfır Konfigürasyon**: Varsayılan ayarlarla hemen kullanıma hazır
+- **Adaptive Learning Mode**: Learns from application traffic to minimize false positive rates
+- **Modular Architecture**: Choose security modules based on your needs
+- **OWASP Top 10 Protection**: XSS, SQLi, NoSQLi, ReDoS and more
+- **Multi-Framework Support**: Express, Koa, Fastify
+- **Community Rules**: Continuously updated rule sets
+- **Prometheus Integration**: Metrics and monitoring
+- **Zero Configuration**: Ready to use with default settings
 
-## 📦 Kurulum
+## 📦 Installation
 
 ```bash
-npm install node-waf
+npm install @mertcanureten/node-waf
 ```
 
-## 🎯 Hızlı Başlangıç
+## 🎯 Quick Start
 
 ```javascript
 const express = require('express');
-const waf = require('node-waf');
+const waf = require('@mertcanureten/node-waf');
 
 const app = express();
 
-// WAF'i etkinleştir
+// Enable WAF
 app.use(waf());
 
 app.get('/', (req, res) => {
-  res.json({ message: 'Güvenli API!' });
+  res.json({ message: 'Secure API!' });
 });
 
 app.listen(3000);
 ```
 
-## 🔧 Gelişmiş Kullanım
+## 🔧 Advanced Usage
 
 ```javascript
-const waf = require('node-waf');
+const waf = require('@mertcanureten/node-waf');
 
 app.use(waf({
   modules: ['xss', 'sqli', 'ratelimit'],
@@ -59,7 +59,7 @@ app.get('/waf/stats', waf.stats());
 app.get('/metrics', waf.metrics());
 ```
 
-## 🛡️ Desteklenen Saldırı Türleri
+## 🛡️ Supported Attack Types
 
 - **XSS (Cross-Site Scripting)**
 - **SQL Injection**
@@ -71,21 +71,21 @@ app.get('/metrics', waf.metrics());
 
 ## 📈 Roadmap
 
-- [x] v0.1 - Express middleware ve temel kurallar
-- [x] v0.2 - Anomaly scoring ve config dosyası desteği
-- [x] v0.3 - Adaptive learning mode ve Prometheus
-- [ ] v1.0 - Multi-framework support ve community rules
+- [x] v0.1 - Express middleware and basic rules
+- [x] v0.2 - Anomaly scoring and config file support
+- [x] v0.3 - Adaptive learning mode and Prometheus
+- [ ] v1.0 - Multi-framework support and community rules
 
-## 🤝 Katkıda Bulunma
+## 🤝 Contributing
 
-Bu proje açık kaynak! Katkılarınızı bekliyoruz.
+This project is open source! We welcome your contributions.
 
-## 📄 Lisans
+## 📄 License
 
 MIT License
 
-## 🔗 Bağlantılar
+## 🔗 Links
 
-- [GitHub](https://github.com/node-waf/node-waf)
-- [NPM](https://www.npmjs.com/package/node-waf)
-- [Dokümantasyon](https://node-waf.dev)
+- [GitHub](https://github.com/mertcanureten/node-waf)
+- [NPM](https://www.npmjs.com/package/@mertcanureten/node-waf)
+- [Documentation](https://github.com/mertcanureten/node-waf#readme)

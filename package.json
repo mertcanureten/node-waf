@@ -1,6 +1,6 @@
 {
-  "name": "node-waf",
-  "version": "0.3.0",
+  "name": "@mertcanureten/node-waf",
+  "version": "0.3.1",
   "description": "Node.js Web Application Firewall - OWASP Top 10 protection with adaptive learning and anomaly detection",
   "main": "lib/index.js",
   "files": [
