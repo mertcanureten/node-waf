@@ -1,0 +1,60 @@
+{
+  "name": "node-waf",
+  "version": "0.3.0",
+  "description": "Node.js için Açık Kaynak Web Application Firewall - OWASP Top 10 saldırı vektörlerine karşı kapsamlı, modüler ve community-driven çözüm",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint lib/**/*.js test/**/*.js",
+    "lint:fix": "eslint lib/**/*.js test/**/*.js --fix",
+    "dev": "nodemon examples/basic-server.js",
+    "dev:advanced": "nodemon examples/advanced-server.js",
+    "build": "echo 'No build step required for Node.js'",
+    "start": "node examples/basic-server.js",
+    "start:advanced": "node examples/advanced-server.js"
+  },
+  "keywords": [
+    "waf",
+    "web-application-firewall",
+    "security",
+    "owasp",
+    "xss",
+    "sqli",
+    "rate-limiting",
+    "middleware",
+    "express",
+    "koa",
+    "fastify",
+    "adaptive-learning",
+    "anomaly-detection"
+  ],
+  "author": "Node-WAF Community",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "js-yaml": "^4.1.0",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.1.5",
+    "xss-clean": "^0.1.4",
+    "hpp": "^0.2.3"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "eslint": "^8.55.0",
+    "nodemon": "^3.0.2",
+    "supertest": "^6.3.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mertcanureten/node-waf.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mertcanureten/node-waf/issues"
+  },
+  "homepage": "https://github.com/mertcanureten/node-waf#readme"
+}

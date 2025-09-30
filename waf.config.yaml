@@ -1,0 +1,43 @@
+# Node-WAF Configuration File
+# YAML format configuration
+
+enabled: true
+dryRun: false
+threshold: 5
+
+# Security modules to enable
+modules:
+  - xss
+  - sqli
+  - ratelimit
+
+# Adaptive learning mode
+adaptiveLearning: false
+learningPeriod: 7  # days
+
+# Paths to skip WAF protection
+skipPaths:
+  - /health
+  - /metrics
+  - /favicon.ico
+
+# Logging configuration
+logLevel: info
+logFile: null
+
+# Rate limiting configuration
+rateLimit:
+  enabled: true
+  windowMs: 900000  # 15 minutes
+  max: 100  # requests per window
+
+# IP blocking configuration
+ipBlocking:
+  enabled: true
+  blockDuration: 86400000  # 24 hours
+  maxViolations: 5
+
+# Statistics configuration
+stats:
+  enabled: true
+  retentionDays: 30

@@ -1,0 +1,24 @@
+{
+  "enabled": true,
+  "dryRun": false,
+  "threshold": 5,
+  "modules": ["xss", "sqli", "ratelimit"],
+  "adaptiveLearning": false,
+  "learningPeriod": 7,
+  "skipPaths": ["/health", "/metrics", "/favicon.ico"],
+  "logLevel": "info",
+  "rateLimit": {
+    "enabled": true,
+    "windowMs": 900000,
+    "max": 100
+  },
+  "ipBlocking": {
+    "enabled": true,
+    "blockDuration": 86400000,
+    "maxViolations": 5
+  },
+  "stats": {
+    "enabled": true,
+    "retentionDays": 30
+  }
+}
